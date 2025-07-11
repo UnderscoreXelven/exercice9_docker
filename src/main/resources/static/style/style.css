@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #dcdcdc;
+}
+
+header a{
+    width: max-content;
+    padding: 15px;
+    text-decoration: none;
+}
+
+header a:link, header a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover{
+    background-color: #c0c0c0;
+}
+
+header form{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.menu-accueil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    gap: 30px;
+}
+
+.menu-accueil a{
+    text-decoration: none;
+}
+
+.menu-accueil a:link, .menu-accueil a:visited{
+    text-decoration: none;
+}
+
+.menu-accueil h1{
+    width: 300px;
+}
+
+/* From Uiverse.io by absoluteSTrange */
+.accueil-btn {
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 56, 86);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    width: 300px;
+    text-align: center;
+}
+
+.accueil-btn:hover {
+    box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+.accueil-btn:active {
+    background-color: rgb(255, 56, 86);
+    /*50, 168, 80*/
+    box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+.tab-container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+table.table th,
+table.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.add-student-form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.add-form-button{
+    margin-top: 10px;
+}
+
+.title{
+    text-align: center;
+}
+
+.student-detail{
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.student-detail h2{
+    color: #1d243a;
+}
+
+.detail-btns{
+    display: flex;
+    justify-content: space-around;
+}

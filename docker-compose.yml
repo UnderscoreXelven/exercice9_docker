@@ -1,0 +1,41 @@
+services:
+  appjava:
+    build:
+      context: .
+    container_name: appjava
+    depends_on:
+      - db
+    environment:
+      - HOST=${HOST}
+      - PORT=${PORT}
+      - DB=${DB}
+      - PASS=${PASS}
+    ports:
+      - "8956:8956"
+    restart: always
+  db:
+    image: mysql
+    container_name: my_bdd
+    restart: always
+    ports: 
+      - "9100:3306"
+    environment:
+      - MYSQL_DATABASE=${DB}
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+
+
+volumes:
+  mysql_data:

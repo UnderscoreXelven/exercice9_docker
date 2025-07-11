@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <header th:block th:fragment="header">
+        <a th:href="@{/}">Accueil</a>
+        <a th:href="@{/etudiant/list}">Liste d'étudiants</a>
+        <a th:href="@{/etudiant/add}">Ajouter un étudiant</a>
+        <form th:action="@{/etudiant/search}" method="get">
+            <input type="text" name="name" placeholder="rechercher">
+            <input type="submit" value="Rechercher">
+        </form>
+    </header>
+    <div class="menu-accueil">
+        <h1><a th:href="@{/etudiant/list}" class="accueil-btn">Liste des étudiants</a></h1>
+        <h1><a class="accueil-btn" th:href="@{/etudiant/add}">Inscription</a></h1>
+    </div>
+</body>
+</html>
